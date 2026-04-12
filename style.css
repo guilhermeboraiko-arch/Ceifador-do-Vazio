@@ -2,19 +2,38 @@ html {
     scroll-behavior: smooth !important; 
 }
 
-body, html {
+body {
     margin: 0; 
     padding: 0;
+    padding-top: 70px;
     font-family: 'Segoe UI', sans-serif;
     background-color: #0d0d0d; 
     color: white;
 }
 
-header .container {
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(13, 13, 13, 0.95);
+    z-index: 1000;
+    border-bottom: 2px solid #9d4edd;
+}
+
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #9d4edd;
 }
 
 nav ul {
@@ -34,12 +53,10 @@ nav ul li a {
     background-color: rgba(157, 78, 221, 0.1);
     transition: 0.3s;
     display: inline-block;
-    white-space: nowrap;
 }
 
 nav ul li a:hover {
     background-color: #9d4edd;
-    color: white;
     box-shadow: 0px 0px 15px #9d4edd;
     transform: translateY(-2px);
 }
@@ -50,8 +67,10 @@ nav ul li a:hover {
                 url('VoidReaper.png') no-repeat center center;
     background-size: cover;
     display: flex; 
+    flex-direction: column;
     justify-content: center; 
     align-items: center;
+    text-align: center;
 }
 
 .btn-jogar {
@@ -75,37 +94,6 @@ nav ul li a:hover {
     padding: 100px 50px;
     background-color: #1a1a1a;
     text-align: center;
-    line-height: 1.6;
-}
-
-.sobre-section h2 { 
-    color: #9d4edd; 
-    font-size: 36px; 
-}
-
-.sobre-container { 
-    max-width: 800px; 
-    margin: 0 auto; 
-    font-size: 18px; 
-    color: #ccc; 
-}
-
-.sobre-container p {
-    margin-bottom: 20px;
-    text-align: justify;
-}
-
-.sobre-container h2 {
-    margin-top: 30px;
-}
-
-.sobre-section {
-    padding: 100px 50px;
-    background-color: #1a1a1a;
-    text-align: center;
-    line-height: 1.6;
-    border-top: 4px solid #9d4edd; 
-    box-shadow: 0px -10px 20px rgba(157, 78, 221, 0.3);
 }
 
 .info-card {
@@ -114,73 +102,13 @@ nav ul li a:hover {
     border-radius: 15px;
     padding: 30px;
     margin-bottom: 40px;
-    box-shadow: 0px 5px 15px rgba(157, 78, 221, 0.2);
-    transition: 0.3s;
-}
-
-.info-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 25px rgba(157, 78, 221, 0.4);
-}
-
-.comandos-grid {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.comando-item {
-    margin: 15px;
-    text-align: center;
 }
 
 .tecla {
-    display: inline-block;
     background-color: #9d4edd;
-    color: white;
     padding: 10px 20px;
     border-radius: 8px;
-    font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
-    font-size: 20px;
-    margin-bottom: 10px;
-    box-shadow: 0px 4px 0px #5a189a;
-}
-
-.comando-item p {
-    color: #ccc;
-    font-size: 16px;
-}
-
-.divisor {
-    height: 2px;
-    background: linear-gradient(to right, transparent, #9d4edd, transparent);
-    margin: 50px auto;
-    width: 80%;
-    box-shadow: 0px 0px 10px #9d4edd;
-    opacity: 0.6;
-}
-
-#como-jogar {
-    scroll-margin-top: 100px; 
-}
-
-body.light-mode {
-    background-color: #e0e0e0;
-    color: #1a1a1a;
-}
-
-body.light-mode header, 
-body.light-mode .info-card {
-    background-color: #ffffff;
-    color: #1a1a1a;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-}
-
-body.light-mode nav ul li a {
-    color: #9d4edd;
-    border-color: #9d4edd;
 }
 
 #botao-tema {
@@ -190,5 +118,8 @@ body.light-mode nav ul li a {
     border: 1px solid #9d4edd;
     color: #9d4edd;
     font-weight: bold;
-    transition: 0.3s;
 }
+
+body.light-mode { background-color: #f0f0f0; color: #1a1a1a; }
+body.light-mode header { background-color: #ffffff; }
+body.light-mode .info-card { background-color: #ffffff; color: #1a1a1a; }

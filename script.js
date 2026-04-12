@@ -1,39 +1,36 @@
-function verificarIdade() {
-    let idade = prompt("Para acessar o conteúdo do Nightborne, digite sua idade:");
-
-    if (idade >= 16) {
-        alert("Acesso liberado para a nova geração de Ceifadores!");
-        document.getElementById("conteudo-sensivel").style.filter = "none";
-    } else {
-        alert("Conteúdo restrito. Você ainda não tem idade para enfrentar o vazio.");
-    }
-}
-
-function boasVindas() {
-    let nome = document.getElementById("nome-usuario").value;
-    let mensagem = document.getElementById("mensagem-boas-vindas");
-
-    if (nome !== "") {
-        mensagem.innerText = "Bem-vindo, " + nome + ". A foice do Nightborne espera por você!";
-        mensagem.style.color = "#9d4edd";
-    } else {
-        alert("Por favor, digite seu nome!");
-    }
-}
-
-window.onload = verificarIdade;
-
 const ANO_LANCAMENTO = 2026;
-const anoAtual = new Date().getFullYear();
+const IDADE_MINIMA = 16;
+let nomeUsuario = "";
+let idadeUsuario = 0;
+let anoAtual = new Date().getFullYear();
 
-if (anoAtual === ANO_LANCAMENTO) {
-    alert("GRANDE LANÇAMENTO 2026: Void Reaper está disponível!");
-}
+window.onload = function() {
+    nomeUsuario = prompt("Bem-vindo ao Vazio! Como você se chama, viajante?");
+    idadeUsuario = prompt("Olá, " + nomeUsuario + "! Qual a sua idade?");
+
+    const conteudoSensivel = document.getElementById("conteudo-sensivel");
+    const msgBoasVindas = document.getElementById("mensagem-boas-vindas");
+
+    if (idadeUsuario >= IDADE_MINIMA) {
+        alert("Acesso liberado, " + nomeUsuario + ". A foice do Nightborne te espera!");
+        if (conteudoSensivel) conteudoSensivel.style.filter = "none";
+    } else {
+        alert("Cuidado, " + nomeUsuario + "! Você é jovem demais para as sombras. O conteúdo permanecerá oculto.");
+        if (conteudoSensivel) conteudoSensivel.style.filter = "blur(20px)";
+    }
+
+    if (anoAtual === ANO_LANCAMENTO) {
+        alert("GRANDE LANÇAMENTO " + ANO_LANCAMENTO + ": Void Reaper está disponível!");
+    }
+
+    if (msgBoasVindas) {
+        msgBoasVindas.innerText = "Bem-vindo, " + nomeUsuario + "!";
+    }
+};
 
 function alternarTema() {
     const corpo = document.body;
     const botao = document.getElementById("botao-tema");
-
     corpo.classList.toggle("light-mode");
 
     if (corpo.classList.contains("light-mode")) {

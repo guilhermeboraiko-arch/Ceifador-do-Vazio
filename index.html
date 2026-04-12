@@ -6,70 +6,63 @@
     <title>Void Reaper | Oficial</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
-<script src="script.js"></script>
-<div id="conteudo-sensivel" style="filter: blur(20px);">
-   </div>
-
-   <section id="saudacao-area" class="info-card">
-    <h3>Identifique-se, Viajante</h3>
-    <input type="text" id="nome-usuario" placeholder="Digite seu nome...">
-    <button onclick="boasVindas()">Entrar no Vazio</button>
-    <p id="mensagem-boas-vindas"></p>
-</section>
-
-<button id="botao-tema" onclick="alternarTema()">Tema Claro</button>
-
 <body>
     
     <header>
-        <div class="logo-text">Void Reaper</div>
-        <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#sobre">Sobre o Jogo</a></li>
-            <li><a href="#como-jogar">Como Jogar</a></li>
-            <li><a href="https://github.com/guilhermeboraiko-arch/Jogo-Void-Reaper" target="_blank">GitHub</a><li>
-        </ul>
-        </nav>
+        <div class="header-container">
+            <div class="logo-text">Void Reaper</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre o Jogo</a></li>
+                    <li><a href="#como-jogar">Como Jogar</a></li>
+                    <li><a href="https://github.com/guilhermeboraiko-arch/Jogo-Void-Reaper" target="_blank">GitHub</a></li>
+                </ul>
+            </nav>
+            <button id="botao-tema" onclick="alternarTema()">Tema Claro</button>
+        </div>
     </header>
 
-    <section class="hero">
-        <a href="game/index.html" target="_blank" class="btn-jogar">JOGAR AGORA</a>
-    </section>
+    <div id="conteudo-sensivel" style="filter: blur(20px); transition: 0.5s;">
+        <section id="home" class="hero">
+            <div class="hero-inner">
+                <p id="mensagem-boas-vindas" style="font-size: 24px; font-weight: bold; text-shadow: 2px 2px 10px black; margin-bottom: 20px;"></p>
+                <a href="game/index.html" target="_blank" class="btn-jogar">JOGAR AGORA</a>
+            </div>
+        </section>
+    </div>
 
     <section id="sobre" class="sobre-section">
-    <div class="sobre-container">
-        
-        <div class="info-card">
-            <h2>A Jornada do Ceifador</h2>
-            <p><strong>Void Reaper</strong> é uma experiência de ação sombria onde cada movimento conta. Explore um reino desolado e enfrente entidades etéreas</p>
-            <h3>O Nightborne</h3>
-            <p>Ele já foi o ceifador mais experiente das sombras. Mas em uma emboscada, o <strong>Nightborne</strong> teve sua foice roubada por inimigos fantasmas. Desarmado e enfraquecido, sua missão é sobreviver e recuperar sua fonte de poder.</p>
-        </div>
+        <div class="sobre-container">
+            <div class="info-card">
+                <h2>A Jornada do Ceifador</h2>
+                <p><strong>Void Reaper</strong> é uma experiência de ação sombria onde cada movimento conta. Explore um reino desolado e enfrente entidades etéreas</p>
+                <h3>O Nightborne</h3>
+                <p>Ele já foi o ceifador mais experiente das sombras. Mas em uma emboscada, o <strong>Nightborne</strong> teve sua foice roubada por inimigos fantasmas. Desarmado e enfraquecido, sua missão é sobreviver e recuperar sua fonte de poder.</p>
+            </div>
 
-        <div class="divisor"></div>
+            <div class="divisor"></div>
 
-        <div id="como-jogar" class="info-card">
-            <h2>Como Jogar</h2>
-            <div class="comandos-grid">
-                <div class="comando-item">
-                    <span class="tecla">← ↑ →</span>
-                    <p>Movimentação</p>
-                </div>
-                <div class="comando-item">
-                    <span class="tecla">Espaço</span>
-                    <p>Ataque</p>
-                </div>
-                <div class="comando-item">
-                    <span class="tecla">R</span>
-                    <p>Resetar Fase / Reiniciar</p>
+            <div id="como-jogar" class="info-card">
+                <h2>Como Jogar</h2>
+                <div class="comandos-grid">
+                    <div class="comando-item">
+                        <span class="tecla">← ↑ →</span>
+                        <p>Movimentação</p>
+                    </div>
+                    <div class="comando-item">
+                        <span class="tecla">Espaço</span>
+                        <p>Ataque</p>
+                    </div>
+                    <div class="comando-item">
+                        <span class="tecla">R</span>
+                        <p>Resetar Fase / Reiniciar</p>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
 
-    </div>
-</section>
-
+    <script src="script.js"></script>
 </body>
 </html>
