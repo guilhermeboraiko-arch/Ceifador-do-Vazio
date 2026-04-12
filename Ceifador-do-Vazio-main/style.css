@@ -1,0 +1,99 @@
+html { 
+    scroll-behavior: smooth !important; 
+}
+
+body, html {
+    margin: 0; 
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0d0d0d; 
+    color: white;
+}
+
+/* Cabeçalho */
+header {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 15px 50px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    border-bottom: 2px solid #9d4edd;
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    z-index: 1000; 
+    box-sizing: border-box;
+}
+
+.logo-text { 
+    font-size: 22px; 
+    font-weight: bold; 
+    color: #9d4edd; 
+    text-transform: uppercase; 
+}
+
+nav a { 
+    color: white; 
+    text-decoration: none; 
+    margin-left: 20px; 
+    transition: 0.3s; 
+}
+
+nav a:hover { 
+    color: #9d4edd; 
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), 
+                url('VoidReaper.png') no-repeat center center;
+    background-size: cover;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.btn-jogar {
+    padding: 18px 50px; 
+    font-size: 24px; 
+    background-color: #9d4edd;
+    color: white; 
+    border-radius: 50px; 
+    text-decoration: none; 
+    font-weight: bold;
+    box-shadow: 0px 0px 20px rgba(157, 78, 221, 0.5);
+    transition: 0.4s;
+}
+
+.btn-jogar:hover {
+    background-color: #7b2cbf;
+    transform: scale(1.1);
+}
+
+.sobre-section {
+    padding: 100px 50px;
+    background-color: #1a1a1a;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.sobre-section h2 { 
+    color: #9d4edd; 
+    font-size: 36px; 
+}
+
+.sobre-container { 
+    max-width: 800px; 
+    margin: 0 auto; 
+    font-size: 18px; 
+    color: #ccc; 
+}
+
+.sobre-section {
+    padding: 100px 50px;
+    background-color: #1a1a1a;
+    text-align: center;
+    line-height: 1.6;
+    border-top: 4px solid #9d4edd; 
+    box-shadow: 0px -10px 20px rgba(157, 78, 221, 0.3);
+}
