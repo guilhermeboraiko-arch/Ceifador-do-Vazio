@@ -5,10 +5,9 @@ let idadeUsuario = 0;
 let anoAtual = new Date().getFullYear();
 
 window.onload = function() {
-    // 1. Pergunta o NOME primeiro
+
     nomeUsuario = prompt("Bem-vindo ao Vazio! Como você se chama, viajante?");
     
-    // 2. Pergunta a IDADE depois
     idadeUsuario = prompt("Olá, " + nomeUsuario + "! Qual a sua idade?");
 
     const conteudoSensivel = document.getElementById("conteudo-sensivel");
